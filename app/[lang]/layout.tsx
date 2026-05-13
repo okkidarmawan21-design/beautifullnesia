@@ -6,10 +6,11 @@ export default async function Layout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: Lang }>
+  params: Promise<{ lang: string }>
 }) {
-  const { lang } = await params
-  const t = dict[lang] ?? dict['id']
+  const { lang: langRaw } = await params
+  const lang = (langRaw === 'en' ? 'en' : 'id') as Lang
+  const t = dict[lang]
   const otherLang = lang === 'id' ? 'en' : 'id'
 
   return (
@@ -33,7 +34,6 @@ export default async function Layout({
 
           {/* Right Icons */}
           <div className="flex items-center gap-4 text-[#506072]">
-            {/* Language Toggle */}
             <Link
               href={`/${otherLang}`}
               className="font-[Manrope] text-xs font-bold tracking-widest uppercase border border-[#506072]/30 px-3 py-1 rounded hover:bg-[#506072] hover:text-white transition-all"
@@ -44,13 +44,11 @@ export default async function Layout({
             <Link href={`/${lang}/admin`}>
               <span className="material-symbols-outlined cursor-pointer hover:text-[#2b3437] transition-colors text-[22px]">account_circle</span>
             </Link>
-            {/* Mobile Hamburger */}
             <span className="material-symbols-outlined md:hidden cursor-pointer text-[22px]">menu</span>
           </div>
         </nav>
       </header>
 
-      {/* Konten Halaman */}
       {children}
 
       {/* Footer */}
