@@ -58,8 +58,8 @@ export default async function Layout({
             <div className="font-[Noto_Serif] text-xl font-bold text-[#2b3437]">Beautifulnesia</div>
             <p className="text-sm text-[#506072] leading-relaxed max-w-xs">
               {lang === 'id'
-                ? 'Platform editorial perjalanan independen yang menghadirkan panduan jujur dan mendalam tentang keindahan Indonesia.'
-                : 'An independent travel editorial platform delivering honest, in-depth guides to the beauty of Indonesia.'}
+                ? 'Referensi perjalanan independen yang menghadirkan ulasan menyeluruh tentang setiap sudut keindahan Indonesia.'
+                : 'An independent travel reference providing comprehensive insights into every corner of Indonesian beauty.'}
             </p>
           </div>
           <div>
