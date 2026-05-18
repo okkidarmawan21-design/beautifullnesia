@@ -23,3 +23,11 @@ export default function RootLayout({
     </html>
   )
 }
+
+export const metadata: Metadata = {
+  title: 'Beautifulnesia',
+  description: 'Panduan wisata Indonesia terpercaya',
+  verification: {
+    google: 'zaFQ8xnx3V1-V9L6yuXrIZxBzQwp2rpaYaGd-hkfZDQ', // ← paste kode dari Google di sini
+  },
+}
