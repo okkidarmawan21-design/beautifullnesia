@@ -150,14 +150,14 @@ export default async function ArtikelDetail({
               <div className="bg-white p-8 rounded-xl"
                 style={{ boxShadow: '0 20px 40px rgba(43,52,55,0.06)' }}>
                 <h4 className="font-[Manrope] text-xs tracking-widest text-[#506072] uppercase mb-6">
-                  {lang === 'id' ? 'Kurator Konten' : 'Content Curator'}
+                  {lang === 'id' ? 'Redaktur Konten' : 'Content Editor'}
                 </h4>
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 outline outline-offset-4 outline-[#abb3b7]/30">
                     <img
                       alt="Author"
                       className="w-full h-full object-cover"
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+                      src="https://images.unsplash.com/vector-1740737650825-1ce4f5377085?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     />
                   </div>
                   <h3 className="font-[Noto_Serif] text-lg text-[#2b3437] mb-2">
@@ -165,8 +165,8 @@ export default async function ArtikelDetail({
                   </h3>
                   <p className="font-[Manrope] text-sm text-[#586064] leading-relaxed">
                     {lang === 'id'
-                      ? 'Panduan jujur tanpa filter sponsor untuk perjalananmu yang lebih bermakna.'
-                      : 'Honest guides without sponsor filters for a more meaningful journey.'}
+                      ? 'Beautifulnesia adalah referensi perjalanan independen yang menghadirkan ulasan menyeluruh tentang setiap sudut keindahan Indonesia.'
+                      : 'Beautifulnesia is an independent travel reference providing comprehensive insights into every corner of Indonesian beauty.'}
                   </p>
                   <div className="mt-8 pt-6 border-t border-[#f1f4f6] flex justify-center gap-5 text-[#586064]">
                     <span className="material-symbols-outlined cursor-pointer hover:text-[#506072] transition-colors">share</span>

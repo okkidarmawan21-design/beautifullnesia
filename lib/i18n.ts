@@ -2,9 +2,8 @@ export const dict = {
   id: {
     nav: {
       destinations: 'Destinasi',
-      guides: 'Panduan Pemula',
-      reviews: 'Ulasan',
-      promos: 'Promo Terkini',
+      itinerary: 'Itinerary',
+      tips: 'Tips & Budget',
     },
     home: {
       eyebrow: 'Volume 1: Nusantara',
@@ -15,6 +14,13 @@ export const dict = {
       featured: 'Destinasi Unggulan',
       latest: 'Artikel Terbaru',
       read_more: 'Baca Selengkapnya',
+    },
+    artikel: {
+      semua: 'Semua Artikel',
+      filter_pulau: 'Pulau',
+      filter_durasi: 'Durasi',
+      filter_jenis: 'Jenis Trip',
+      tidak_ada: 'Tidak ada artikel ditemukan.',
     },
     admin: {
       title: 'Dashboard Admin',
@@ -36,9 +42,8 @@ export const dict = {
   en: {
     nav: {
       destinations: 'Destinations',
-      guides: 'Beginner Guides',
-      reviews: 'Reviews',
-      promos: 'Latest Promos',
+      itinerary: 'Itinerary',
+      tips: 'Tips & Budget',
     },
     home: {
       eyebrow: 'Volume 1: The Archipelago',
@@ -49,6 +54,13 @@ export const dict = {
       featured: 'Featured Escapes',
       latest: 'Latest Articles',
       read_more: 'Read More',
+    },
+    artikel: {
+      semua: 'All Articles',
+      filter_pulau: 'Island',
+      filter_durasi: 'Duration',
+      filter_jenis: 'Trip Type',
+      tidak_ada: 'No articles found.',
     },
     admin: {
       title: 'Admin Dashboard',
