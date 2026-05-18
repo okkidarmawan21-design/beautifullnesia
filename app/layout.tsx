@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Beautifulnesia',
   description: 'Panduan wisata Indonesia terpercaya',
   verification: {
-    google: 'zaFQ8xnx3V1-V9L6yuXrIZxBzQwp2rpaYaGd-hkfZDQ', // ← paste kode dari Google di sini
+    google: '6XT3mPNXApBMlJBtnEee4Df8-8NhIY33nSQJ-cTEa-4', // ← paste kode dari Google di sini
   },
 }
 
