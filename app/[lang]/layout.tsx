@@ -1,10 +1,10 @@
 import { dict, Lang } from '@/lib/i18n'
 import Link from 'next/link'
-
+ 
 const PULAU = ['Sumatera', 'Jawa', 'Kalimantan', 'Sulawesi', 'Bali & NTT', 'Papua']
 const DURASI = ['Weekend (2-3 hari)', 'Seminggu (5-7 hari)', 'Long trip (10+ hari)']
 const JENIS  = ['Solo', 'Keluarga', 'Honeymoon', 'Backpacker']
-
+ 
 export default async function Layout({
   children,
   params,
@@ -16,7 +16,7 @@ export default async function Layout({
   const lang = (langRaw === 'en' ? 'en' : 'id') as Lang
   const t = dict[lang]
   const otherLang = lang === 'id' ? 'en' : 'id'
-
+ 
   return (
     <>
       <style>{`
@@ -55,20 +55,28 @@ export default async function Layout({
         .dropdown-divider { height: 0.5px; background: #dbe4e7; margin: 6px 0; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
       `}</style>
-
+ 
       {/* ── NAVBAR ── */}
       <header className="bg-[#f8f9fa]/90 backdrop-blur-xl sticky top-0 z-50 border-b border-[#dbe4e7]/60">
         <nav className="flex justify-between items-center w-full px-8 py-5 max-w-[1440px] mx-auto">
-
+ 
           {/* Logo — klik 5x untuk akses admin */}
           <span id="secret-logo"
             className="font-[Noto_Serif] text-xl md:text-2xl font-bold italic text-[#2b3437] cursor-pointer select-none">
             Beautifulnesia
           </span>
-
+ 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-10">
-
+ 
+            {/* Beranda */}
+            <Link
+              href={`/${lang}`}
+              className="font-[Noto_Serif] text-base text-[#506072]/60 hover:text-[#2b3437] transition-colors"
+            >
+              {lang === 'id' ? 'Beranda' : 'Home'}
+            </Link>
+ 
             {/* Destinasi — dropdown pulau */}
             <div className="nav-dropdown">
               <button className="font-[Noto_Serif] text-base text-[#506072] hover:text-[#2b3437] transition-colors flex items-center gap-1 pb-0.5 border-b border-[#506072]">
@@ -94,7 +102,7 @@ export default async function Layout({
                 </Link>
               </div>
             </div>
-
+ 
             {/* Itinerary — dropdown durasi & jenis */}
             <div className="nav-dropdown">
               <button className="font-[Noto_Serif] text-base text-[#506072]/60 hover:text-[#2b3437] transition-colors flex items-center gap-1">
@@ -130,7 +138,7 @@ export default async function Layout({
                 </Link>
               </div>
             </div>
-
+ 
             {/* Tips & Budget — langsung ke filter */}
             <Link
               href={`/${lang}/artikel?kategori=Tips`}
@@ -138,9 +146,9 @@ export default async function Layout({
             >
               {t.nav.tips}
             </Link>
-
+ 
           </div>
-
+ 
           {/* Kanan */}
           <div className="flex items-center gap-5 text-[#506072]">
             <Link
@@ -152,12 +160,10 @@ export default async function Layout({
             <Link href={`/${lang}/artikel`}>
               <span className="material-symbols-outlined cursor-pointer hover:text-[#2b3437] transition-colors text-[22px]">search</span>
             </Link>
-            {/* Mobile menu */}
-            <span className="material-symbols-outlined md:hidden cursor-pointer text-[22px]">menu</span>
           </div>
-
+ 
         </nav>
-
+ 
         {/* Mobile nav — scroll horizontal */}
         <div className="md:hidden border-t border-[#dbe4e7]/50 px-8 py-3 flex gap-6 overflow-x-auto no-scrollbar">
           <Link href={`/${lang}/artikel?kategori=Destinasi`}
@@ -180,9 +186,9 @@ export default async function Layout({
           ))}
         </div>
       </header>
-
+ 
       {children}
-
+ 
       {/* ── FOOTER ── */}
       <footer className="bg-[#2b3437] pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 md:px-12 max-w-[1440px] mx-auto">
@@ -235,7 +241,7 @@ export default async function Layout({
           </div>
         </div>
       </footer>
-
+ 
       {/* Secret admin — klik logo 5x dalam 3 detik */}
       <script dangerouslySetInnerHTML={{ __html: `
         (function(){
